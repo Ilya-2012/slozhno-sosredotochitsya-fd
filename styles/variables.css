@@ -2,3 +2,30 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --font-family: "IBM Plex Mono", sans-serif;
+  --page-padding: 20px;
+  --page-gap: 60px;
+  --section-offset: 80px;
+  --gallery-gap: 20px;
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --title-decor: #FF8DCB;
+  --logo-main-color: #FFC2E6;
+  --decor-color: #353430;
+  --text-color: #353430;
+  --section-title-color: #353430;
+  --card-title-color: #353430;
+  --footer-title-shadow: #FF0070;
+
+}
+/*на медиазапросе планшет сменить .focus-reasons {
+  grid-template-columns: 1fr 2fr;
+}
+  на
+  2.06fr;*/
+/* Для телефона задать 
+block-size: 100%;
+  position: static;
+  inset-inline-start: 0;
+  */
