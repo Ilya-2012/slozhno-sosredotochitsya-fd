@@ -16,7 +16,6 @@
   --text-color: #353430;
   --section-title-color: #353430;
   --card-title-color: #353430;
-  --footer-title-shadow: #FF0070;
 
 }
 /*на медиазапросе планшет сменить .focus-reasons {
@@ -28,4 +27,6 @@
 block-size: 100%;
   position: static;
   inset-inline-start: 0;
-  */
+  
+  
+  Для футера на больших экранах поменять тень*/

@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  width: 100vw;
+  width: 100svi;
   padding: var(--page-padding);
   overflow-x: hidden;
   font-family: var(--font-family, sans-serif);
@@ -17,16 +17,17 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-end: var(--page-gap);
-  block-size: 100vh;
+  block-size: 100svb;
   min-block-size: 375px;
   grid-template-columns: minmax(min(320px, 100%), 1fr);
+  padding-block-end: calc(var(--page-padding) * 2);
 }
 .decorated-zone::before {
   content: '';
   position: absolute;
   border-inline-start: 1px solid var(--decor-color);
   border-block-end: 1px solid var(--decor-color);
-  inset-block-end: 0;
+  inset-block-end: calc(var(--page-padding) * 2);
   inset-inline-start: 0;
   inline-size: 25px;
   block-size: 25px;
@@ -88,8 +89,8 @@
 .header__description {
   justify-self: right;
   align-self: center;
-  inline-size: max(50%, 335px);
-}
+  inline-size: max(50%, 355px);
+} 
 .main {
   display: flex;
   flex-direction: column;
@@ -145,9 +146,7 @@
 .focus-tips {
   grid-template-columns: 1fr 2.06fr;
 }
-.section-with-sidebar {
-  align-items: start;
-}
+
 .article-focus-tips {
   grid-column: 2 / 3;
 }
@@ -156,11 +155,21 @@
   flex-direction: column;
   gap: 20px;
 }
+.focus-distractors { 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content auto;
+}
+.article-distractors-item {
+  grid-row: 2 / 3;
+}
+.title-distractors {
+  grid-column: 1 / 2;
+}
 .section-gallery {
   display: grid;
   grid-template-columns:  repeat(3, 1fr);
   grid-template-rows: max-content repeat(4, minmax(min-content, max-content));
-  gap: 20px;
+  gap: var(--gallery-gap);
 }
 .title-gallery {
   grid-column: 1 / 4;
@@ -201,11 +210,74 @@
   justify-content: center;
   align-items: center;
   margin-block-start: var(--page-gap);
-  block-size: 100vh;
+  block-size: 100svh;
   min-block-size: 375px;
+  padding-block-end: calc(var(--page-padding) * 2);
 }
 .footer-title {
   color: var(--logo-main-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  text-shadow: 4px 4px 0 var(--footer-title-shadow);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+@media (orientation: portrait) {
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+}
+
+@media (width < 600px) {
+  :root {
+  --page-padding: 10px;
+  --page-gap: 40px;
+  --section-offset: 50px;
+  --gallery-gap: 10px;
+  }
+  .header__title {
+    block-size: 100%;
+    position: static;
+    inset-inline-start: 0;
+    letter-spacing: -2px;
+  }
+  .focus-reasons, .focus-tips {
+    grid-template-columns: 1fr;
+  }
+  .article-focus-reasons, .article-tips-container {
+    grid-column: 1 / 2;
+  }
+  .focus-distractors {
+  grid-template-columns: 1fr;
+}
+  .article-distractors-item {
+  grid-row: initial;
+  grid-column: initial;
+}
+  .section-gallery {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .section-gallery .gallery-item {
+    grid-column: 1 / 2;
+    grid-row: initial;
+    object-fit: contain;
+  }
+  .footer-title {
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+.article-distractors-item {
+  grid-row: initial;
+}
+}
+@media (600px <= width < 980px) {
+  .focus-reasons, .focus-tips {
+    grid-template-columns: 1fr 2fr;
+}
+.article-distractors-item {
+  grid-row: initial;
+  grid-column: 1 / 4;
+}
 }
