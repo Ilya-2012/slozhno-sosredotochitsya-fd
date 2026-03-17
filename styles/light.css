@@ -4,8 +4,18 @@
   переключая тему
 */
 @media (prefers-color-scheme: light) {
-  :root {
-
+  :root.theme-auto {
+    --bg-cover-image: url(../images/cover-image-light.png);
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --logo-main-color: #FFC2E6;
+  --decor-color: #353430;
+  --text-color: #353430;
+  --section-title-color: #353430;
+  --card-title-color: #353430;
+  }
+  .theme-auto .header__decoration {
+    display: none;
   }
 }
 :root.theme-light {
@@ -14,6 +24,16 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-cover-image: url(../images/cover-image-light.png);
-  
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --logo-main-color: #FFC2E6;
+  --decor-color: #353430;
+  --text-color: #353430;
+  --section-title-color: #353430;
+  --card-title-color: #353430;
   
 }
+.theme-light .header__decoration {
+  display: none;
+}
+/* ОБЯЗАТЕЛЬНО ПЕРЕОПРЕДЕЛИТЬ СТИЛИ ДЛЯ ПК У ТЕНИ НА FOOTER*/

@@ -16,17 +16,19 @@
   --text-color: #353430;
   --section-title-color: #353430;
   --card-title-color: #353430;
+  --footer-title-shadow-desktop-light: #FF0070;
+}
+@media (width < 600px) {
+  :root {
+  --page-padding: 10px;
+  --page-gap: 40px;
+  --section-offset: 50px;
+  --gallery-gap: 10px;
+  }
+}
+@media (980px <= width) {
+  .footer-title {
+    --accent-color: var(--footer-title-shadow-desktop-light);
+  }
+}
 
-}
-/*на медиазапросе планшет сменить .focus-reasons {
-  grid-template-columns: 1fr 2fr;
-}
-  на
-  2.06fr;*/
-/* Для телефона задать 
-block-size: 100%;
-  position: static;
-  inset-inline-start: 0;
-  
-  
-  Для футера на больших экранах поменять тень*/
