@@ -1,4 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   overflow-x: hidden;
   font-family: var(--font-family, sans-serif);
@@ -58,7 +57,7 @@
   color: var(--decor-color);
   text-transform: lowercase;
   background-color: transparent;
-  inline-size: 70px;
+  min-inline-size: 70px;
 }
 
 .header__theme-menu-button:hover {
@@ -253,6 +252,7 @@
   align-items: center;
   margin-block-start: var(--page-padding);
   padding: var(--page-padding);
+  line-height: 83%;
   block-size: 100svb;
   min-block-size: 375px;
 }
@@ -276,13 +276,12 @@
 
 @media (width < 600px) {
 
-  .header__title {
+  .header-title {
     position: static;
     letter-spacing: -2px;
-    inset-inline-start: 0;
+    inset-inline-start: initial;
   }
 
-  
   .section-with-sidebar {
     grid-template-columns: 1fr;
   }
@@ -329,6 +328,6 @@
 }
 @media (980px <= width) {
   .page {
-    inline-size: 100svi; /* Свойство влияет на построение скроллбара */
+    inline-size: 100svi; 
   }
 }
