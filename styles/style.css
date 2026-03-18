@@ -326,8 +326,9 @@
     grid-row: initial;
   }
 }
+
 @media (980px <= width) {
   .page {
-    inline-size: 100svi; 
+    inline-size: 100svi;
   }
 }
