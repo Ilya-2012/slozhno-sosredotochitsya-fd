@@ -1,4 +1,5 @@
 :root {
+  --bg-cover-image: url(../images/cover-image-light.png);
   --font-family: "IBM Plex Mono", sans-serif;
   --page-padding: 20px;
   --page-gap: 40px;
@@ -27,4 +28,3 @@
     --accent-color: var(--footer-title-shadow-desktop-light);
   }
 }
-
