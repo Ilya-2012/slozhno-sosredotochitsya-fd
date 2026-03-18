@@ -5,7 +5,7 @@
 :root {
   --font-family: "IBM Plex Mono", sans-serif;
   --page-padding: 20px;
-  --page-gap: 60px;
+  --page-gap: 40px;
   --section-offset: 80px;
   --gallery-gap: 20px;
   --bg-color: #FFF1F7;
@@ -21,7 +21,7 @@
 @media (width < 600px) {
   :root {
   --page-padding: 10px;
-  --page-gap: 40px;
+  --page-gap: 30px;
   --section-offset: 50px;
   --gallery-gap: 10px;
   }

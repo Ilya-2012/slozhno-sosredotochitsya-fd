@@ -14,9 +14,6 @@
   --section-title-color: #353430;
   --card-title-color: #353430;
   }
-  .theme-auto .header__decoration {
-    display: none;
-  }
 }
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
@@ -33,7 +30,3 @@
   --card-title-color: #353430;
   
 }
-.theme-light .header__decoration {
-  display: none;
-}
-/* ОБЯЗАТЕЛЬНО ПЕРЕОПРЕДЕЛИТЬ СТИЛИ ДЛЯ ПК У ТЕНИ НА FOOTER*/
