@@ -126,7 +126,7 @@
   flex-direction: column;
   gap: var(--section-offset, 80px);
   margin-block-start: var(--page-gap, 40px);
-  padding: var(--page-padding), 20px;
+  padding: var(--page-padding, 20px);
 }
 
 .section-content {
