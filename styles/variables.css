@@ -1,6 +1,7 @@
 :root {
   --bg-cover-image: url(../images/cover-image-light.png);
-  --font-family: "IBM Plex Mono", sans-serif;
+  --font-family: "IBM Plex Mono", monospace;
+  --accent-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --page-padding: 20px;
   --page-gap: 40px;
   --section-offset: 80px;
@@ -15,6 +16,7 @@
   --card-title-color: #353430;
   --footer-title-shadow-desktop-light: #FF0070;
 }
+
 @media (width < 600px) {
   :root {
   --page-padding: 10px;
@@ -23,6 +25,7 @@
   --gallery-gap: 10px;
   }
 }
+
 @media (980px <= width) {
   .footer-title {
     --accent-color: var(--footer-title-shadow-desktop-light);
