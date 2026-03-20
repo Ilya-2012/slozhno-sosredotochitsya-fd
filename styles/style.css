@@ -6,6 +6,7 @@
   background-image: var(--bg-cover-image, url(../images/cover-image-light.png));
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
@@ -208,10 +209,7 @@
 }
 
 .advice-card-title {
-  color: var(--card-title-color, #353430);
-  font-size: inherit;
   font-weight: 400;
-  background-color: var(--accent-color, #FF8DCB);
 }
 
 .section-gallery {
